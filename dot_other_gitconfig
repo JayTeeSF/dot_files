@@ -1,0 +1,26 @@
+[user]
+	name = Jason Hoth Jr
+	email = jason_hoth_jr@his-service.net
+[color]
+	status = auto
+	branch = auto
+	sh = auto
+	ui = auto
+	diff = auto
+[mergetool]
+  trustExitCode = false
+
+[core]
+	editor = /usr/bin/vi
+[push]
+	default = current
+[rerere]
+	enabled = true
+
+[git-tmbundle]
+  gitx-path = /Applications/GitX.app/Contents/Resources/gitx
+
+[alias]
+  lg = log --stat --ignore-space-at-eol --abbrev-commit --relative-date --format=medium
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all

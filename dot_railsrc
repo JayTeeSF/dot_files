@@ -1,0 +1,33 @@
+# alchemy specific  - SiteSwitcher
+def ss(site=nil)
+  site ||= ENV['SITE'] ? ENV['SITE'] : 'fastweb'
+  ENV['SITE']  = site
+  SiteSwitcher.switch_to(site)
+end
+
+def change_log(stream)
+  ActiveRecord::Base.logger = Logger.new(stream)
+  ActiveRecord::Base.clear_active_connections!
+  reload!
+end
+
+def encrypt(clear_str)
+  ActiveRecord::Base.connection.select_value(
+    ActiveRecord::Base.send(:sanitize_sql_array, ["select hex(aes_encrypt(?, ?))", clear_str, '1Sheeg6GrofVoavDonfa'])
+  )
+end
+
+def decrypt(encrypted_str)
+  ActiveRecord::Base.connection.select_value(
+    ActiveRecord::Base.send(:sanitize_sql_array, ["select aes_decrypt(unhex(?), ?)", encrypted_str, '1Sheeg6GrofVoavDonfa'])
+  )  
+end
+
+def show_log
+  change_log(STDOUT)
+end
+
+def silence_log
+  change_log(nil)
+end
+
