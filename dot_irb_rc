@@ -242,3 +242,7 @@ if ! MACRUBY
   Wirble.init
   Wirble.colorize
 end
+
+#load File.dirname(__FILE__) + '/.irb_lib/*.rb'
+Dir[File.dirname(__FILE__) + "/.irb_lib/*.rb"].each { |file| require(file)}
+include ProfileGrapher
