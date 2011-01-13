@@ -1,9 +1,8 @@
 module ProfileGrapher
   module ClassMethods
-    def timestamp
-      Time.now.strftime("%Y%m%d%H%M%S")
-    end
 
+    # FIXME: I should really add output_file and mode to the options hash
+    # My one public method
     def profile(options={}, output_file="/tmp/profile_html_output_#{timestamp}.html", mode='w+', &block)
       return unless block_given?
 
@@ -20,8 +19,13 @@ module ProfileGrapher
       result
     end
 
+  protected
+    def timestamp
+      Time.now.strftime("%Y%m%d%H%M%S")
+    end
+
     def pt_profile(options={}, output_file="/tmp/my_app_profile_#{timestamp}", mode='w+', &block)
-require 'perftools'
+      require 'perftools'
       num_times = options[:num_times] || 5_000
       options.delete(:num_times)
 
@@ -37,7 +41,7 @@ require 'perftools'
 
     # profile { some_method }
     def rp_profile(options={}, output_file="/tmp/profile_html_output_#{timestamp}.html", mode='w+', &block)
-require 'ruby-prof'
+      require 'ruby-prof'
 
       options[:min_percent] ||= 0
       num_times = options[:num_times] || 5_000
