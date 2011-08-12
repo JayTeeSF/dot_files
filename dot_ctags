@@ -1,0 +1,4 @@
+--exclude=\.git
+--exclude=log
+--exclude=*\.js
+--exclude=*\.sql

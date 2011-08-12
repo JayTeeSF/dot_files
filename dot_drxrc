@@ -1,0 +1,6 @@
+Drx::ObjInfo::GRAPHVIZ_COMMAND.replace '
+  dot -Gbgcolor=transparent "{dot}" -Tpng -o "{gif}" -Tcmapx -o "{map}" 2>&1 && \
+  convert "{gif}" -matte \\( +clone -background black -shadow 60x4+5+4 \\) \
+    +swap -background white -mosaic "{gif}"
+'
+Drx::TkGUI::EDITOR_COMMAND.replace('mate +%d "%s"')

@@ -1,10 +1,11 @@
 module ProfileGrapher
   module ClassMethods
 
-    # FIXME: I should really add output_file and mode to the options hash
     # My one public method
-    def profile(options={}, output_file="/tmp/profile_html_output_#{timestamp}.html", mode='w+', &block)
+    def profile(options={}, &block)
       return unless block_given?
+      output_file = options[:output_file] || "/tmp/profile_html_output_#{timestamp}.html"
+      mode = options[:mode] || 'w+'
 
       browser = options[:no_browser] ? false : true
       options.delete(:no_browser)
@@ -24,6 +25,7 @@ module ProfileGrapher
       Time.now.strftime("%Y%m%d%H%M%S")
     end
 
+    # the good one!
     def pt_profile(options={}, output_file="/tmp/my_app_profile_#{timestamp}", mode='w+', &block)
       require 'perftools'
       num_times = options[:num_times] || 5_000

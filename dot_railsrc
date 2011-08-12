@@ -13,13 +13,13 @@ end
 
 def encrypt(clear_str)
   ActiveRecord::Base.connection.select_value(
-    ActiveRecord::Base.send(:sanitize_sql_array, ["select hex(aes_encrypt(?, ?))", clear_str, '1Sheeg6GrofVoavDonfa'])
+    ActiveRecord::Base.send(:sanitize_sql_array, ["select hex(aes_encrypt(?, ?))", clear_str, cryptic_string])
   )
 end
 
 def decrypt(encrypted_str)
   ActiveRecord::Base.connection.select_value(
-    ActiveRecord::Base.send(:sanitize_sql_array, ["select aes_decrypt(unhex(?), ?)", encrypted_str, '1Sheeg6GrofVoavDonfa'])
+    ActiveRecord::Base.send(:sanitize_sql_array, ["select aes_decrypt(unhex(?), ?)", encrypted_str, cryptic_string])
   )  
 end
 

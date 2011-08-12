@@ -1,0 +1,13 @@
+*.tmproj
+.ignore/*
+.ignore/**
+.DS_Store
+*.swp
+*.rvmrc
+*.vim
+.ctags
+*.md5sum
+tags
+tmtags
+dump.rdb
+nohup.out
