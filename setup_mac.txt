@@ -1,0 +1,41 @@
+# get iterm2:
+  # http://code.google.com/p/iterm2/downloads/detail?name=iTerm2-1_0_0_20120326-unofficial.zip&can=2&q=
+
+# get adium (default IM client):
+  # http://adium.im/
+
+# install xcode from app-store
+  # download cmd-line tools (via preferences -> download)
+
+# install brew
+  ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+
+# get git:
+  brew install git
+
+#install rvm:
+  curl -L https://get.rvm.io | bash -s stable --ruby
+
+# download dot_files repo (download mac-github app)
+
+cd dev/dot_files/
+# copy / edit dot files (bash_..., etc)
+  cp dot_rspec ~/.rspec
+  cp dot_git-completion.sh ~/.git-completion.sh
+  brew install ctags # then confirm correct one is in path!
+
+
+  
+ 
+# install mvim:
+brew install macvim
+
+  # config w/ janus:
+    curl -Lo- https://bit.ly/janus-bootstrap | bash
+
+   # tweak janus:
+     cp dot_vimrc.before ~/.vimrc.before
+     cp dot_vimrc.after ~/.vimrc.after
+
+# install gitx:
+  # http://gitx.frim.nl/
