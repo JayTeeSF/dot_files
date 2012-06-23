@@ -1,0 +1,21 @@
+if has("gui_mac") || has("gui_macvim")
+  set guioptions-=L
+  set guioptions-=T
+endif
+
+set wildignore+=*.jpg,*.bmp,*.gif,*.png
+set wildignore+=vendor/**
+set wildignore+=tmp/**
+set wildignore+=log/**
+set wildignore+=gpg/*
+set wildignore+=config/*.example
+set wildignore+=tags
+
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
+
+let g:CommandTMaxFiles=15000
+nnoremap <esc> :noh<return><esc>
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+color murphy
