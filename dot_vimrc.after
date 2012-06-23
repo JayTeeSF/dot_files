@@ -1,2 +1,8 @@
 set guifont=Menlo\ Regular:h14
 "" set guifont=Bitstream\ Vera\ Sans\ Mono:h24
+
+" colorscheme
+ let g:solarized_termcolors=256
+ set t_Co=16
+ set background=dark
+ colorscheme solarized
