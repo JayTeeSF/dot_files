@@ -31,7 +31,7 @@ alias sc='cd $RAILS_ROOT; pry -r ./config/environment'
 alias gsync='git fetch origin; git remote prune origin'
 alias f='dscacheutil -flushcache'
 alias lg='git log --stat --ignore-space-at-eol --abbrev-commit --relative-date --format=medium'
-alias ctag='ctags --extra=+f -R *'
+alias ctag='ctags  --exclude=*.js --exclude=*.log --exclude=*.sql --extra=+f -R *'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 export DISPLAY=:0.0
