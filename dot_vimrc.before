@@ -3,7 +3,7 @@ if has("gui_mac") || has("gui_macvim")
   set guioptions-=T
 endif
 
-set wildignore+=*.jpg,*.bmp,*.gif,*.png
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.log,*.sql
 set wildignore+=vendor/**
 set wildignore+=tmp/**
 set wildignore+=log/**
@@ -11,7 +11,8 @@ set wildignore+=gpg/*
 set wildignore+=config/*.example
 set wildignore+=tags
 
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
+" let NERDTreeIgnore=['\.log$', '\.sql$', '\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
+let NERDTreeIgnore=['\.log$', '\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
 
 let g:CommandTMaxFiles=15000
 nnoremap <esc> :noh<return><esc>
