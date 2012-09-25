@@ -11,10 +11,23 @@ set wildignore+=gpg/*
 set wildignore+=config/*.example
 set wildignore+=tags
 
-" let NERDTreeIgnore=['\.log$', '\.sql$', '\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
-let NERDTreeIgnore=['\.log$', '\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
+""
+"" disable nerdtree + netrw when loading MacVim,
+"" as we can use alloy's build with the sidebar
+"" see: http://staff.washington.edu/ivanoats/blog/2012/01/13/making-macvim-pretty/
+"" brew linkapps
+if has("gui_running")
+  call janus#disable_plugin('nerdtree', "switching to alloy-vim with folder-tree")
+  let g:loaded_netrw        = 1 " Disable netrw
+  let g:loaded_netrwPlugin  = 1 " Disable netrw
+else
+  "" latest:
+  let NERDTreeIgnore=['\.log$', '\.sql$', '\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
+endif
 
-let g:CommandTMaxFiles=15000
+"" reduce from 15K for speed ?!
+let g:CommandTMaxFiles=5000
+
 nnoremap <esc> :noh<return><esc>
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
