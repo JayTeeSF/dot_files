@@ -1,8 +1,12 @@
 set guifont=Menlo\ Regular:h14
 "" set guifont=Bitstream\ Vera\ Sans\ Mono:h24
 
-" colorscheme
- let g:solarized_termcolors=256
- set t_Co=16
- set background=dark
- colorscheme solarized
+"" "colorscheme
+"" let g:solarized_termcolors=256
+"" set t_Co=16
+"" set background=dark
+"" colorscheme solarized
+
+if janus#is_plugin_enabled('fugitive')
+  set statusline+=%{fugitive#statusline()}
+endif
