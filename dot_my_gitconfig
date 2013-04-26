@@ -1,24 +1,32 @@
 [user]
 	name = JayTeeSF
 	email = jonathan@his-service.net
+
+[github]
+	user = JayTeeSF
+
 [color]
+	ui = true
 	status = auto
 	branch = auto
 	sh = auto
-	ui = auto
 	diff = auto
+
 [mergetool]
   trustExitCode = false
 
 [core]
 	editor = /usr/bin/vi
+	excludesfile = /Users/jthomas/.gitignore
+
 [push]
 	default = current
-[rerere]
-	enabled = true
 
-[git-tmbundle]
-  gitx-path = /Applications/GitX.app/Contents/Resources/gitx
+#[rerere]
+#	enabled = true
+
+#[git-tmbundle]
+#  gitx-path = /Applications/GitX.app/Contents/Resources/gitx
 
 [alias]
   lg = log --stat --ignore-space-at-eol --abbrev-commit --relative-date --format=medium
@@ -27,4 +35,3 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-
