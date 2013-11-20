@@ -28,6 +28,7 @@ alias rbx="$HOME/rubinius/bin/rbx"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias mvim="/Applications/MacVim.app/Contents/MacOS/MacVim"
 alias vi="vim"
+alias ogc='open -a Google\ Chrome --args --disable-web-security'
 set -o vi
 alias h='/Volumes/Public/hosts/gethosts.sh'
 alias mroe='/usr/bin/more'
