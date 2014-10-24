@@ -16,14 +16,14 @@ set wildignore+=tags
 "" as we can use alloy's build with the sidebar
 "" see: http://staff.washington.edu/ivanoats/blog/2012/01/13/making-macvim-pretty/
 "" brew linkapps
-if has("gui_running")
-  call janus#disable_plugin('nerdtree', "switching to alloy-vim with folder-tree")
-  let g:loaded_netrw        = 1 " Disable netrw
-  let g:loaded_netrwPlugin  = 1 " Disable netrw
-else
+"if has("gui_running")
+"  call janus#disable_plugin('nerdtree', "switching to alloy-vim with folder-tree")
+"  let g:loaded_netrw        = 1 " Disable netrw
+"  let g:loaded_netrwPlugin  = 1 " Disable netrw
+"else
   "" latest:
   let NERDTreeIgnore=['\.log$', '\.sql$', '\.pyc$', '\.rbc$', '\~$', '\.lock', '\.txt', '\.example', '\.rdb', '\.yml.erb', '\.sample', '\.conf.erb', '\.gem', 'spec_report.html']
-endif
+"endif
 
 "" reduce from 15K for speed ?!
 let g:CommandTMaxFiles=5000

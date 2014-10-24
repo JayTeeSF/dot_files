@@ -1,5 +1,6 @@
 # get iterm2:
-  # http://code.google.com/p/iterm2/downloads/detail?name=iTerm2-1_0_0_20120326-unofficial.zip&can=2&q=
+  http://iterm2.com/downloads.html
+  #https://iterm2.com/downloads/stable/iTerm2_v2_0.zip
 
 # get adium (default IM client):
   # http://adium.im/
@@ -8,10 +9,12 @@
   # download cmd-line tools (via preferences -> download)
 
 # install brew
-  ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # get git:
   brew install git
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
 
 #install rvm:
   curl -L https://get.rvm.io | bash -s stable --ruby
@@ -20,13 +23,11 @@
 
 cd dev/dot_files/
 # copy / edit dot files (bash_..., etc)
-  cp dot_rspec ~/.rspec
-  cp dot_git-completion.sh ~/.git-completion.sh
+  ln -s dev/dot_files/dot_rspec ~/.rspec
+  ln -s dev/dot_files/dot_git-completion.sh ~/.git-completion.sh
   brew install ctags # then confirm correct one is in path!
 
 
-  
- 
 # install mvim:
 brew install macvim
 
@@ -34,8 +35,8 @@ brew install macvim
     curl -Lo- https://bit.ly/janus-bootstrap | bash
 
    # tweak janus:
-     cp dot_vimrc.before ~/.vimrc.before
-     cp dot_vimrc.after ~/.vimrc.after
+     ln -s dev/dot_files/dot_vimrc.before ~/.vimrc.before
+     ln -s dev/dot_files/dot_vimrc.after ~/.vimrc.after
 
 # install gitx:
   # http://gitx.frim.nl/

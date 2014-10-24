@@ -1,4 +1,4 @@
 #cp $HOME/.ssh/key_backup/game_rsa $HOME/.ssh/
 #cp $HOME/.ssh/key_backup/game_rsa.pub $HOME/.ssh/
 #cp $HOME/._my_gitconfig  $HOME/.gitconfig
-rvm rbx@games --create
+#rvm rbx@games --create

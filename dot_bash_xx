@@ -15,6 +15,7 @@ alias cdr='cd $RAILS_ROOT' # first set RR
 alias prr='export RAILS_ROOT=$HOME/dev/pepper'
 alias cdp='prr; cdr'
 
+
 alias rs='cdr; ./script/rails/server -u -p3000 -b127.0.0.1'
 alias pc='cdr; pry -r ./config/environment'
 
@@ -37,13 +38,35 @@ alias got='/usr/bin/git'
 
 export DISPLAY=:0.0
 #export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/mysql/bin:/Users/jthomas/android-sdks/platform-tools:/Users/jthomas/android-sdks/tools
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 ##
 # Your previous /Users/jthomas/.bash_profile file was backed up as /Users/jthomas/.bash_profile.macports-saved_2012-03-13_at_09:44:40
 ##
 
-# MacPorts Installer addition on 2012-03-13_at_09:44:40: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+## MacPorts Installer addition on 2012-03-13_at_09:44:40: adding an appropriate PATH variable for use with MacPorts.
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+
+#export AFI_SECRET_KEY_BASE='88ejfbaa3d8a82ea225735ada5bd010689e4f0a62931248d9baf62c2da1eb8e7e8f7f65857250caf6e101f9ea86d85189a8d37b7f5749ac0ed2db178246b724f6'
+#export AFI_PROD_DB_DATABASE='applyingforit_production'
+#export AFI_PROD_DB_USER='applyingforit'
+#export AFI_PROD_DB_PW=''
+#export AFI_TEST_DB_DATABASE='applyingforit_test'
+#export AFI_TEST_DB_USER='applyingforit'
+#export AFI_TEST_DB_PW=''
+#export AFI_DEV_DB_DATABASE='applyingforit_development'
+#export AFI_DEV_DB_USER='applyingforit'
+#export AFI_DEV_DB_PW=''
+
+export MAHOUT_DIR="/usr/local/Cellar/mahout/0.9/"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export SDK_DIR='/Applications/Android\ Studio.app/sdk'
+#export JAVA_TOOLS='/Applications/Android\ Studio.app/sdk/platform-tools'
+
+export GOPATH=$HOME/gocode
+alias cdg='cd $GOPATH/src/github.com/jayteesf'
+
+PATH=$HOME/.rvm/bin:$HOME/bin:/usr/local/bin:$PATH:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android\ Studio.app/sdk/tools:$HOME/gocode/bin
+# Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
