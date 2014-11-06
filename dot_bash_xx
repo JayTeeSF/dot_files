@@ -52,6 +52,7 @@ alias got='/usr/bin/git'
 
 export DISPLAY=:0.0
 #export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/mysql/bin:/Users/jthomas/android-sdks/platform-tools:/Users/jthomas/android-sdks/tools
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 ##
 # Your previous /Users/jthomas/.bash_profile file was backed up as /Users/jthomas/.bash_profile.macports-saved_2012-03-13_at_09:44:40
