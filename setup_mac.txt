@@ -40,3 +40,20 @@ brew install macvim
 
 # install gitx:
   # http://gitx.frim.nl/
+
+# install simplenote from the app store (?instead of? notational-velocity)
+# OR
+# http://notational.net/NotationalVelocity.zip
+
+# db utility:
+# https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg
+
+# copy profile pics (for use by os &/ ?!)
+
+# todoist (from appstore)
+# boomerang (for gmail)
+# http://www.boomeranggmail.com/download.html
+
+# sourcetree (from the appstore)
+
+brew install pv
