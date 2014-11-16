@@ -57,3 +57,4 @@ brew install macvim
 # sourcetree (from the appstore)
 
 brew install pv
+brew install pstree
