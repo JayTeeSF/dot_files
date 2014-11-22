@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+class StringExtension
+  def self.slugify(lines=$stdin.readlines)
+    puts new(lines).slugify
+  end
+
+  def initialize(lines=[])
+    @lines = lines
+  end
+
+  def slugify
+    @lines.map {|line| _slugify(line) }
+  end
+
+  private
+  def _slugify(line)
+    line.strip()
+      .gsub(/[^a-zA-Z0-9]+/, '-')
+      .gsub(/[^a-zA-Z0-9]+$/, '')
+      .gsub(/^[^a-zA-Z0-9]+/, '')
+      .downcase
+  end
+end
+
+if $0 == __FILE__
+  StringExtension.slugify
+end

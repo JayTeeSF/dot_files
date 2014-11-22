@@ -58,3 +58,4 @@ brew install macvim
 
 brew install pv
 brew install pstree
+ln -s ~/dev/dot_files/slugify ~/bin/slugify
