@@ -83,7 +83,7 @@ alias jgp='export GOPATH=$HOME/gocode'
 jgp
 alias cdg='jgp; cd $GOPATH/src/github.com/jayteesf'
 alias bgp='export GOPATH=$HOME/dev/bsu'
-alias cdb='bgp; cd $GOPATH/src/brainscape.com/bsu'
+alias cdbsu='bgp; cd $GOPATH/src/brainscape.com/bsu'
 
 PATH=$HOME/.rvm/bin:$HOME/bin:/usr/local/bin:$PATH:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android\ Studio.app/sdk/tools:$HOME/gocode/bin:/usr/local/Cellar/mysql55/5.5.30/bin
 # Add RVM to PATH for scripting
