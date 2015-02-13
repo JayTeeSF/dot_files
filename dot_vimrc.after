@@ -60,3 +60,6 @@ endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>l :PromoteToLet<cr>
 
+" Use rubocop
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+nmap <Leader>c :RuboCop<CR>

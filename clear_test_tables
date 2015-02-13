@@ -1,0 +1,1 @@
+bundle exec rails runner -e test 'p (ActiveRecord::Base.connection.tables - ["schema_migrations"]).reduce({}) { |hash, tbl| hash[tbl] = ActiveRecord::Base.connection.execute("select count(*) from #{tbl}").first.first; hash  }.select { |tbl, cnt| cnt > 0 }.keys.each { |tbl| ActiveRecord::Base.connection.execute("truncate #{tbl}")}'

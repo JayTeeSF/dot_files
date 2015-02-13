@@ -23,8 +23,10 @@
 
 cd dev/dot_files/
 # copy / edit dot files (bash_..., etc)
-  ln -s dev/dot_files/dot_rspec ~/.rspec
-  ln -s dev/dot_files/dot_git-completion.sh ~/.git-completion.sh
+  ln -s ~/dev/dot_files/dot_rspec ~/.rspec
+  ln -s ~/dev/dot_files/dot_git-completion.sh ~/.git-completion.sh
+  ln -s ~/dev/dot_files/clear_test_tables ~/bin/clear_test_tables
+  chmod +x ~/bin/clear_test_tables
   brew install ctags # then confirm correct one is in path!
 
 

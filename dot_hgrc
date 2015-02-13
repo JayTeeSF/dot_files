@@ -3,7 +3,7 @@
 [ui]
 # name and email, e.g.
 # username = Jane Doe <jdoe@example.com>
-username = Jonathan "JT" Thomas jthomas@brain-scape.com
+username = Jonathan Thomas <jthomas@brain-scape.com>
 
 [merge-tools]
 filemerge.executable = /Users/jthomas/bin/opendiff-w
@@ -12,7 +12,9 @@ filemerge.args = $local $other -ancestor $base -merge $output
 [extensions]
 # uncomment these lines to enable some popular extensions
 # (see "hg help extensions" for more info)
+transplant=
 shelve= 
+purge= 
 # pager =
 # progress =
 # color =
