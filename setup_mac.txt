@@ -27,6 +27,8 @@ cd dev/dot_files/
   ln -s ~/dev/dot_files/dot_git-completion.sh ~/.git-completion.sh
   ln -s ~/dev/dot_files/clear_test_tables ~/bin/clear_test_tables
   chmod +x ~/bin/clear_test_tables
+  ln -s ~/dev/dot_files/docker-enter ~/bin/docker-enter
+  chmod +x ~/bin/docker-enter
   brew install ctags # then confirm correct one is in path!
 
 

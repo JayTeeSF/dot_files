@@ -1,3 +1,7 @@
+docker-ip() {
+  boot2docker ip 2> /dev/null
+}
+
 function parse_git_dirty {
    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
 }
@@ -111,6 +115,6 @@ PATH=$HOME/.rvm/bin:$HOME/bin:/usr/local/bin:$PATH:/Applications/Android\ Studio
    }
 
    complete -F _bsu bsu
-
+$(boot2docker shellinit 2>/dev/null)
 # direnv setup:
 eval "$(direnv hook $0)"
