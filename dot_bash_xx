@@ -46,7 +46,7 @@ alias pc='cdr; pry -r ./config/environment'
 alias gsync='git fetch origin; git remote prune origin'
 alias f='dscacheutil -flushcache'
 alias lg='git log --stat --ignore-space-at-eol --abbrev-commit --relative-date --format=medium'
-alias ctag='ctags  --exclude=*.js --exclude=*.log --exclude=*.sql --extra=+f -R *'
+alias ctag='/usr/local/Cellar/ctags/5.8/bin/ctags  --exclude=*.js --exclude=*.log --exclude=*.sql --extra=+f -R *'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 export MERGE_TOOL=/usr/bin/opendiff
@@ -119,5 +119,14 @@ $(boot2docker shellinit 2>/dev/null)
 # direnv setup:
 eval "$(direnv hook $0)"
 export NO_GUARD=true
-PATH="/usr/local/sbin:$PATH"
+
+# boot2docker ip:
+alias docker_ip='$(boot2docker ip 2>/dev/null)'
+
+# Brainscape iOS setup:
+PATH="/usr/bin/:/usr/local/sbin:$PATH"
 PHP_AUTOCONF=/usr/local/bin/autoconf
+SRC_ROOT="$HOME/dev/bii"
+alias gpcstag='$SRC_ROOT/script/download_content.rb --archive=portal --url=https://staging.brainscape.com --prj_path=$SRC_ROOT --drop_t=true'
+alias gpcprod='$SRC_ROOT/script/download_content.rb --archive=portal --url=https://m.brainscape.com --prj_path=$SRC_ROOT --drop_t=true'
+alias gpclocal='$SRC_ROOT/script/download_content.rb --archive=portal --url=http://0.0.0.0:3000 --prj_path=$SRC_ROOT --drop_t=true'

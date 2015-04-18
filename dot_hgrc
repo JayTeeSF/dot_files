@@ -15,9 +15,14 @@ filemerge.args = $local $other -ancestor $base -merge $output
 transplant=
 shelve= 
 purge= 
+hgext.bookmarks =
+hggit = 
 # pager =
 # progress =
 # color =
+
+[git]
+branch_bookmark_suffix=_git_visible
 
 [alias]
 show = log -pr
