@@ -121,7 +121,7 @@ eval "$(direnv hook $0)"
 export NO_GUARD=true
 
 # boot2docker ip:
-alias docker_ip='$(boot2docker ip 2>/dev/null)'
+# alias docker_ip='$(boot2docker ip 2>/dev/null)' <-- use docker-ip command!
 
 # Brainscape iOS setup:
 PATH="/usr/bin/:/usr/local/sbin:$PATH"
