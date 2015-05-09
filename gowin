@@ -1,0 +1,4 @@
+# assuming you already: brew install go --with-cc-common
+# brew reinstall go --with-cc-common
+#
+GOOS=windows GOARCH=386 go build -o $1.exe $1.go
