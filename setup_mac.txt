@@ -32,6 +32,10 @@ cd dev/dot_files/
   brew install ctags # then confirm correct one is in path!
   ln -s ~/dev/dot_files/slow_query.sh ~/bin/slow_query.sh
   chmod +x ~/bin/slow_query.sh
+  ln -s ~/dev/dot_files/gowin ~/bin/gowin
+  chmod +x ~/bin/gowin
+  ln -s ~/dev/dot_files/ssl_doctor.rb ~/bin/ssl_doctor.rb
+  chmod +x ~/bin/ssl_doctor.rb
 
 
 # install mvim:

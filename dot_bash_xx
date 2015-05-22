@@ -124,9 +124,12 @@ export NO_GUARD=true
 # alias docker_ip='$(boot2docker ip 2>/dev/null)' <-- use docker-ip command!
 
 # Brainscape iOS setup:
-PATH="/usr/bin/:/usr/local/sbin:$PATH"
+# PATH="/usr/bin/:/usr/local/sbin:$PATH"
 PHP_AUTOCONF=/usr/local/bin/autoconf
 SRC_ROOT="$HOME/dev/bii"
 alias gpcstag='$SRC_ROOT/script/download_content.rb --archive=portal --url=https://staging.brainscape.com --prj_path=$SRC_ROOT --drop_t=true'
 alias gpcprod='$SRC_ROOT/script/download_content.rb --archive=portal --url=https://m.brainscape.com --prj_path=$SRC_ROOT --drop_t=true'
 alias gpclocal='$SRC_ROOT/script/download_content.rb --archive=portal --url=http://0.0.0.0:3000 --prj_path=$SRC_ROOT --drop_t=true'
+
+# re-fix
+PATH="$PATH:/usr/local/opt/go/libexec/bin"
