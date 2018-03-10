@@ -9,7 +9,7 @@ set wildignore+=tmp/**
 set wildignore+=log/**
 set wildignore+=gpg/*
 set wildignore+=config/*.example
-set wildignore+=tags
+" set wildignore+=tags
 
 ""
 "" disable nerdtree + netrw when loading MacVim,
@@ -33,3 +33,5 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 color murphy
+
+"" Plugin 'mxw/vim-jsx'

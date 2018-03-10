@@ -48,6 +48,25 @@ endfunction
 nnoremap <leader>. :call OpenTestAlternate()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fold Ruby Methods
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" function! RubyMethodFold(line)
+"   let stack = synstack(a:line, (match(getline(a:line), '^\s*\zs'))+1)
+" 
+"   for synid in stack
+"     if GetSynString(GetSynDict(synid)) ==? "rubyMethodBlock" || GetSynString(GetSynDict(synid)) ==? "rubyDefine" || GetSynString(GetSynDict(synid)) ==? "rubyDocumentation"
+"       return 1
+"     endif
+"   endfor
+" 
+"   return 0
+" endfunction
+" 
+" " Do it:
+" set foldexpr=RubyMethodFold(v:lnum)
+" set foldmethod=expr
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PROMOTE VARIABLE TO RSPEC LET
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! PromoteToLet()
@@ -62,4 +81,5 @@ endfunction
 
 " Use rubocop
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
 nmap <Leader>c :RuboCop<CR>
