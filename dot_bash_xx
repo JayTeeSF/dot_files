@@ -34,11 +34,20 @@ alias redc='/usr/local/bin/redis-cli'
 alias reds='/usr/local/bin/redis-server &'
 
 alias cdr='cd $RAILS_ROOT' # first set RR
-alias cdb='cd $HOME/dev/brain-scape.com'
+alias cdb='cd $HOME/dev/gbrainscape.com'
+alias cda='cd $HOME/dev/bspAndroid'
 
-alias prr='export RAILS_ROOT=$HOME/dev/pepper'
+rrr() {
+  export RAILS_ROOT=$HOME/dev/researcher
+}
+
+prr() {
+  export RAILS_ROOT=$HOME/dev/pepper
+}
+
 alias cdp='prr; cdr'
-
+alias res='rrr; cdr'
+alias set_key_file='export KEY_FILE=/Users/jthomas/dev/household_people_and_contributions/config/f1_keys.rb'
 
 alias rs='cdr; ./script/rails/server -u -p3000 -b127.0.0.1'
 alias pc='cdr; pry -r ./config/environment'
