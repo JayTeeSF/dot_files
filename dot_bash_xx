@@ -35,6 +35,7 @@ alias reds='/usr/local/bin/redis-server &'
 
 alias cdr='cd $RAILS_ROOT' # first set RR
 alias cdb='cd $HOME/dev/gbrainscape.com'
+alias cdj='cd $HOME/dev/jayteesf'
 alias cda='cd $HOME/dev/bspAndroid'
 
 rrr() {
@@ -70,8 +71,6 @@ alias mroe='/usr/bin/more'
 alias got='/usr/bin/git'
 
 export DISPLAY=:0.0
-#export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/mysql/bin:/Users/jthomas/android-sdks/platform-tools:/Users/jthomas/android-sdks/tools
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 ##
 # Your previous /Users/jthomas/.bash_profile file was backed up as /Users/jthomas/.bash_profile.macports-saved_2012-03-13_at_09:44:40
@@ -106,9 +105,7 @@ alias bgp='export GOPATH=$HOME/dev/bsu'
 alias cdbsu='bgp; cd $GOPATH/src/brainscape.com/bsu'
 alias log='hg history --branch . | more'
 
-PATH=$HOME/.rvm/bin:$HOME/bin:/usr/local/bin:$PATH:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android\ Studio.app/sdk/tools:$GOPATH/bin:$GOPATH/bin/bin:/usr/local/Cellar/mysql55/5.5.30/bin
-# Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+PATH=$HOME/bin:/usr/local/bin:$PATH:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android\ Studio.app/sdk/tools:$GOPATH/bin:$GOPATH/bin/bin:/usr/local/Cellar/mysql55/5.5.30/bin
 
    _bsu() {
      COMPREPLY=()
@@ -155,3 +152,14 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # added by Anaconda3 5.0.1 installer
 export PATH="/anaconda3/bin:$PATH"
+
+# remove rails spring!!!
+export DISABLE_SPRING=1
+
+# rbEnv path update(s)
+export RUBY_VERSION=$(cat ${HOME}/.rbenv/version)
+export PATH="${HOME}/.rbenv/versions/${RUBY_VERSION}/bin:$PATH"
+
+export BS_HOST="localhost:3003"
+export BS_REDIS_PORT="6380"
+export BS_MYSQL_PORT="3307"
