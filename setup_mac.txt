@@ -50,6 +50,8 @@ brew install macvim
 
 # install gitx:
   # http://gitx.frim.nl/
+# better yet, gitup (works on high-sierra):
+  # http://gitup.co/
 
 # install simplenote from the app store (?instead of? notational-velocity)
 # OR
