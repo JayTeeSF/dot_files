@@ -34,4 +34,6 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 color murphy
 
+runtime macros/matchit.vim
+
 "" Plugin 'mxw/vim-jsx'
